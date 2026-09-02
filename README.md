@@ -31,7 +31,7 @@ python .\scrape_scryfall_html.py --target 2200 --output cards.csv
 
 The cleanup script preserves the original scraped CSV and writes a separate, analysis-ready file. It collapses irregular whitespace, standardizes price fields as plain decimal values, normalizes set codes and legality values, removes duplicate Scryfall print IDs, and drops every row that has a missing value in any source column.
 
-The cleaned dataset does not repeat categorical text. It replaces each repeated category with a numeric ID, so every `Common` rarity has the same `rarity_id`, every set has the same `set_code_id`, and so on. The code-to-value lookup is saved separately in `scryfall_category_maps.csv`.
+The cleaned dataset does not repeat categorical text. It replaces each repeated category with a numeric ID, so every `Common` rarity has the same `rarity_id`, every set has the same `set_code_id`, and so on. Collector numbers are excluded because they identify individual printings rather than reusable categories. The code-to-value lookup is saved separately in `scryfall_category_maps.csv`.
 
 ```powershell
 python .\clean_scryfall_data.py

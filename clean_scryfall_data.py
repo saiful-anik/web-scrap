@@ -21,7 +21,6 @@ CATEGORY_FIELDS = [
     "power_toughness_or_loyalty",
     "artist",
     "set_code",
-    "collector_number",
     "rarity",
     "language",
     "finishes",
