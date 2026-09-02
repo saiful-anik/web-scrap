@@ -26,3 +26,19 @@ Use a different output file if needed:
 ```powershell
 python .\scrape_scryfall_html.py --target 2200 --output cards.csv
 ```
+
+## Clean the data
+
+The cleanup script preserves the original scraped CSV and writes a separate, analysis-ready file. It collapses irregular whitespace, standardizes price fields as plain decimal values, normalizes set codes and legality values, removes duplicate Scryfall print IDs, and drops every row that has a missing value in any source column.
+
+The cleaned dataset does not repeat categorical text. It replaces each repeated category with a numeric ID, so every `Common` rarity has the same `rarity_id`, every set has the same `set_code_id`, and so on. The code-to-value lookup is saved separately in `scryfall_category_maps.csv`.
+
+```powershell
+python .\clean_scryfall_data.py
+```
+
+This reads `scryfall_cards.csv` and creates `scryfall_cards_clean.csv` plus `scryfall_category_maps.csv`. To use different paths:
+
+```powershell
+python .\clean_scryfall_data.py --input cards.csv --output cards_clean.csv --mapping-output category_maps.csv
+```
