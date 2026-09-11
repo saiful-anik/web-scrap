@@ -1,0 +1,783 @@
+﻿column,code,value
+mana_cost,1,{1}
+mana_cost,2,{1} {B/R} {B/R} {B/R}
+mana_cost,3,{1} {B}
+mana_cost,4,{1} {B} {B}
+mana_cost,5,{1} {B} {R}
+mana_cost,6,{1} {G/W} {G/W}
+mana_cost,7,{1} {G}
+mana_cost,8,{1} {G} {G}
+mana_cost,9,{1} {G} {U}
+mana_cost,10,{1} {G} {W}
+mana_cost,11,{1} {R}
+mana_cost,12,{1} {R} {R}
+mana_cost,13,{1} {R} {W}
+mana_cost,14,{1} {U}
+mana_cost,15,{1} {U} {B}
+mana_cost,16,{1} {U} {R}
+mana_cost,17,{1} {U} {R} {W}
+mana_cost,18,{1} {U} {U}
+mana_cost,19,{1} {W}
+mana_cost,20,{1} {W} {U}
+mana_cost,21,{1} {W} {W}
+mana_cost,22,{1} {W} {W} {W}
+mana_cost,23,{2}
+mana_cost,24,{2} {B}
+mana_cost,25,{2} {B} {B}
+mana_cost,26,{2} {B} {G}
+mana_cost,27,{2} {B} {R}
+mana_cost,28,{2} {G/W}
+mana_cost,29,{2} {G}
+mana_cost,30,{2} {G} {G} {W} {W}
+mana_cost,31,{2} {G} {W}
+mana_cost,32,{2} {R}
+mana_cost,33,{2} {R} {G}
+mana_cost,34,{2} {R} {R}
+mana_cost,35,{2} {R} {W}
+mana_cost,36,{2} {U}
+mana_cost,37,{2} {U} {U}
+mana_cost,38,{2} {W}
+mana_cost,39,{2} {W} {B}
+mana_cost,40,{2} {W} {B} {G}
+mana_cost,41,{2} {W} {W}
+mana_cost,42,{3}
+mana_cost,43,{3} {B}
+mana_cost,44,{3} {B} {B}
+mana_cost,45,{3} {G}
+mana_cost,46,{3} {G} {G}
+mana_cost,47,{3} {G} {W} {U}
+mana_cost,48,{3} {R/G}
+mana_cost,49,{3} {R}
+mana_cost,50,{3} {R} {R}
+mana_cost,51,{3} {R} {W}
+mana_cost,52,{3} {U}
+mana_cost,53,{3} {U} {R}
+mana_cost,54,{3} {U} {U}
+mana_cost,55,{3} {W}
+mana_cost,56,{3} {W} {B}
+mana_cost,57,{3} {W} {B} {G}
+mana_cost,58,{3} {W} {W}
+mana_cost,59,{3} {W} {W} {B} {B}
+mana_cost,60,{4}
+mana_cost,61,{4} {B}
+mana_cost,62,{4} {B} {B}
+mana_cost,63,{4} {G}
+mana_cost,64,{4} {G} {G}
+mana_cost,65,{4} {G} {G} {G}
+mana_cost,66,{4} {G} {W}
+mana_cost,67,{4} {R}
+mana_cost,68,{4} {R} {R}
+mana_cost,69,{4} {R} {R} {R}
+mana_cost,70,{4} {U}
+mana_cost,71,{4} {U} {R}
+mana_cost,72,{4} {U} {U}
+mana_cost,73,{4} {W}
+mana_cost,74,{4} {W} {W}
+mana_cost,75,{4} {W} {W} {B} {B}
+mana_cost,76,{5}
+mana_cost,77,{5} {B}
+mana_cost,78,{5} {B} {B}
+mana_cost,79,{5} {G}
+mana_cost,80,{5} {G} {G}
+mana_cost,81,{5} {G} {W}
+mana_cost,82,{5} {R}
+mana_cost,83,{5} {R} {R}
+mana_cost,84,{5} {U} {U}
+mana_cost,85,{5} {W}
+mana_cost,86,{5} {W} {W}
+mana_cost,87,{6}
+mana_cost,88,{6} {B} {B}
+mana_cost,89,{6} {G} {G}
+mana_cost,90,{6} {R} {R}
+mana_cost,91,{6} {W}
+mana_cost,92,{7}
+mana_cost,93,{B/R} {B/R} {B/R}
+mana_cost,94,{B}
+mana_cost,95,{B} {B} {R} {R}
+mana_cost,96,{G}
+mana_cost,97,{G} {U}
+mana_cost,98,{G} {W}
+mana_cost,99,{R}
+mana_cost,100,{R} {W}
+mana_cost,101,{U}
+mana_cost,102,{U} {B} {R}
+mana_cost,103,{U} {U/R} {R}
+mana_cost,104,{U} {U}
+mana_cost,105,{W/B} {W/B}
+mana_cost,106,{W}
+mana_cost,107,{W} {B} {G}
+mana_cost,108,{W} {W}
+mana_cost,109,{W} {W} {W} {W} {W}
+type_line,1,Artifact Creature — Assembly-Worker
+type_line,2,Artifact Creature — Bird
+type_line,3,Artifact Creature — Bird Construct
+type_line,4,Artifact Creature — Cat
+type_line,5,Artifact Creature — Construct
+type_line,6,Artifact Creature — Equipment Octopus
+type_line,7,Artifact Creature — Gnome
+type_line,8,Artifact Creature — Golem
+type_line,9,Artifact Creature — Phyrexian Cleric
+type_line,10,Artifact Creature — Phyrexian Construct
+type_line,11,Artifact Creature — Robot Villain
+type_line,12,Artifact Creature — Scarecrow
+type_line,13,Artifact Creature — Shapeshifter
+type_line,14,Artifact Creature — Spider
+type_line,15,Artifact Creature — Thopter
+type_line,16,Artifact Creature — Wall
+type_line,17,Artifact — Vehicle
+type_line,18,Creature — Aetherborn Artificer
+type_line,19,Creature — Aetherborn Rogue
+type_line,20,Creature — Angel
+type_line,21,Creature — Angel Advisor
+type_line,22,Creature — Angel Ally
+type_line,23,Creature — Angel Soldier
+type_line,24,Creature — Angel Spirit
+type_line,25,Creature — Archon
+type_line,26,Creature — Armadillo
+type_line,27,Creature — Bear
+type_line,28,Creature — Beast
+type_line,29,Creature — Bird
+type_line,30,Creature — Bird Rogue
+type_line,31,Creature — Bird Soldier
+type_line,32,Creature — Brushwagg
+type_line,33,Creature — Cat Cleric
+type_line,34,Creature — Cat Soldier
+type_line,35,Creature — Crocodile
+type_line,36,Creature — Demon
+type_line,37,Creature — Demon Warlock
+type_line,38,Creature — Dinosaur
+type_line,39,Creature — Djinn Sorcerer
+type_line,40,Creature — Dog
+type_line,41,Creature — Dog Archer
+type_line,42,Creature — Dog Cleric
+type_line,43,Creature — Dog Scout
+type_line,44,Creature — Dog Shaman
+type_line,45,Creature — Dog Soldier
+type_line,46,Creature — Dragon
+type_line,47,Creature — Dragon Wizard
+type_line,48,Creature — Drake
+type_line,49,Creature — Drix Assassin
+type_line,50,Creature — Drone
+type_line,51,Creature — Dwarf Artificer
+type_line,52,Creature — Dwarf Scout
+type_line,53,Creature — Elemental
+type_line,54,Creature — Elemental Beast
+type_line,55,Creature — Elemental Dog
+type_line,56,Creature — Elemental Knight
+type_line,57,Creature — Elemental Ox
+type_line,58,Creature — Elemental Warrior
+type_line,59,Creature — Elephant
+type_line,60,Creature — Elf Artificer
+type_line,61,Creature — Elf Artificer Druid
+type_line,62,Creature — Elf Druid
+type_line,63,Creature — Elf Shaman
+type_line,64,Creature — Eye Horror
+type_line,65,Creature — Faerie
+type_line,66,Creature — Frog Beast
+type_line,67,Creature — Giant Soldier
+type_line,68,Creature — Giant Warrior
+type_line,69,Creature — Giant Wizard
+type_line,70,Creature — Goblin Artificer
+type_line,71,Creature — Goblin Rogue
+type_line,72,Creature — Goblin Rogue Shaman
+type_line,73,Creature — Goblin Samurai
+type_line,74,Creature — Goblin Shaman
+type_line,75,Creature — Goblin Warrior
+type_line,76,Creature — Griffin
+type_line,77,Creature — Halfling Cleric
+type_line,78,Creature — Homunculus Mutant
+type_line,79,Creature — Horror
+type_line,80,Creature — Human
+type_line,81,Creature — Human Advisor
+type_line,82,Creature — Human Archer
+type_line,83,Creature — Human Artificer Warrior
+type_line,84,Creature — Human Assassin
+type_line,85,Creature — Human Citizen
+type_line,86,Creature — Human Cleric
+type_line,87,Creature — Human Cleric Archer
+type_line,88,Creature — Human Druid
+type_line,89,Creature — Human Insect
+type_line,90,Creature — Human Knight
+type_line,91,Creature — Human Kor Soldier
+type_line,92,Creature — Human Mercenary
+type_line,93,Creature — Human Monk
+type_line,94,Creature — Human Peasant
+type_line,95,Creature — Human Rogue
+type_line,96,Creature — Human Samurai
+type_line,97,Creature — Human Scientist Villain
+type_line,98,Creature — Human Scout
+type_line,99,Creature — Human Shaman
+type_line,100,Creature — Human Shaman Ally
+type_line,101,Creature — Human Soldier
+type_line,102,Creature — Human Soldier Knight
+type_line,103,Creature — Human Spy Hero
+type_line,104,Creature — Human Spy Villain
+type_line,105,Creature — Human Survivor
+type_line,106,Creature — Human Villain
+type_line,107,Creature — Human Warlock
+type_line,108,Creature — Human Warrior
+type_line,109,Creature — Human Werewolf
+type_line,110,Creature — Human Wizard
+type_line,111,Creature — Illusion
+type_line,112,Creature — Insect
+type_line,113,Creature — Kavu
+type_line,114,Creature — Kirin
+type_line,115,Creature — Kithkin Cleric
+type_line,116,Creature — Kithkin Rebel
+type_line,117,Creature — Kithkin Rebel Scout
+type_line,118,Creature — Kor Soldier
+type_line,119,Creature — Leech
+type_line,120,Creature — Lizard
+type_line,121,Creature — Lizard Assassin
+type_line,122,Creature — Lizard Beast
+type_line,123,Creature — Merfolk Cleric
+type_line,124,Creature — Minotaur Pilot
+type_line,125,Creature — Minotaur Shaman
+type_line,126,Creature — Minotaur Warrior
+type_line,127,Creature — Monkey
+type_line,128,Creature — Mouse
+type_line,129,Creature — Nightmare
+type_line,130,Creature — Nightmare Angel
+type_line,131,Creature — Ogre Cleric
+type_line,132,Creature — Ooze
+type_line,133,Creature — Orc Cleric
+type_line,134,Creature — Orc Warrior
+type_line,135,Creature — Otter Wizard
+type_line,136,Creature — Pegasus
+type_line,137,Creature — Phoenix
+type_line,138,Creature — Phyrexian Angel
+type_line,139,Creature — Phyrexian Beast
+type_line,140,Creature — Phyrexian Cleric
+type_line,141,Creature — Phyrexian Goblin
+type_line,142,Creature — Salamander Wizard
+type_line,143,Creature — Shapeshifter
+type_line,144,Creature — Siren
+type_line,145,Creature — Sloth Beast
+type_line,146,Creature — Snake
+type_line,147,Creature — Snake Archer
+type_line,148,Creature — Specter
+type_line,149,Creature — Sphinx
+type_line,150,Creature — Spider
+type_line,151,Creature — Spirit
+type_line,152,Creature — Treefolk
+type_line,153,Creature — Vampire
+type_line,154,Creature — Vampire Cleric
+type_line,155,Creature — Vampire Knight
+type_line,156,Creature — Vampire Noble
+type_line,157,Creature — Wall
+type_line,158,Creature — Whale
+type_line,159,Creature — Wolf
+type_line,160,Creature — Wurm
+type_line,161,Creature — Zombie Centaur
+type_line,162,Creature — Zombie Frog Beast
+type_line,163,Creature — Zombie Horror
+type_line,164,Creature — Zombie Minotaur Warrior
+type_line,165,Creature — Zombie Warrior
+type_line,166,Creature — Zombie Wizard
+type_line,167,Creature — Zubera Spirit
+type_line,168,Enchantment Creature — Boar
+type_line,169,Enchantment Creature — Goblin Warrior
+type_line,170,Enchantment Creature — Gorgon
+type_line,171,Enchantment Creature — Horror
+type_line,172,Enchantment Creature — Human Soldier
+type_line,173,Enchantment Creature — Human Warrior
+type_line,174,Enchantment Creature — Nymph
+type_line,175,Enchantment Creature — Zombie
+type_line,176,Legendary Artifact Creature — Scientist Villain
+type_line,177,Legendary Artifact Creature — Toy
+type_line,178,Legendary Creature — Angel
+type_line,179,Legendary Creature — Bat God
+type_line,180,Legendary Creature — Bird Bard
+type_line,181,Legendary Creature — Bison Ally
+type_line,182,Legendary Creature — Cat Avatar
+type_line,183,Legendary Creature — Cat Warrior
+type_line,184,Legendary Creature — Dragon
+type_line,185,Legendary Creature — Elemental Shaman
+type_line,186,Legendary Creature — Elf Noble
+type_line,187,Legendary Creature — Gamma Villain
+type_line,188,Legendary Creature — God
+type_line,189,Legendary Creature — God Warrior Villain
+type_line,190,Legendary Creature — Human
+type_line,191,Legendary Creature — Human Advisor
+type_line,192,Legendary Creature — Human Artificer
+type_line,193,Legendary Creature — Human Assassin
+type_line,194,Legendary Creature — Human Avatar Ally
+type_line,195,Legendary Creature — Human Berserker
+type_line,196,Legendary Creature — Human Cleric
+type_line,197,Legendary Creature — Human Detective
+type_line,198,Legendary Creature — Human Elf Noble
+type_line,199,Legendary Creature — Human Knight
+type_line,200,Legendary Creature — Human Noble
+type_line,201,Legendary Creature — Human Rebel Noble
+type_line,202,Legendary Creature — Human Scientist
+type_line,203,Legendary Creature — Human Scout
+type_line,204,Legendary Creature — Human Soldier
+type_line,205,Legendary Creature — Human Spellshaper
+type_line,206,Legendary Creature — Human Spy Hero
+type_line,207,Legendary Creature — Human Warrior
+type_line,208,Legendary Creature — Human Wizard
+type_line,209,Legendary Creature — Kor Scout
+type_line,210,Legendary Creature — Kor Warrior
+type_line,211,Legendary Creature — Merfolk Wizard
+type_line,212,Legendary Creature — Mole God
+type_line,213,Legendary Creature — Octopus Noble
+type_line,214,Legendary Creature — Otter Wizard
+type_line,215,Legendary Creature — Scorpion Dragon Rogue
+type_line,216,Legendary Creature — Shark Horror Mutant
+type_line,217,Legendary Creature — Sphinx Wizard
+type_line,218,Legendary Creature — Spider Human Hero
+type_line,219,Legendary Creature — Spirit
+type_line,220,Legendary Creature — Spirit Detective
+type_line,221,Legendary Creature — Spirit Soldier
+type_line,222,Legendary Creature — Symbiote Hero
+type_line,223,Legendary Creature — Symbiote Soldier Hero
+type_line,224,Legendary Creature — Vampire
+type_line,225,Legendary Creature — Vampire Assassin
+type_line,226,Legendary Creature — Vampire Druid
+type_line,227,Legendary Enchantment Creature — Harpy
+type_line,228,Snow Creature — Illusion
+power_toughness_or_loyalty,1,*/*
+power_toughness_or_loyalty,2,0/0
+power_toughness_or_loyalty,3,0/1
+power_toughness_or_loyalty,4,0/3
+power_toughness_or_loyalty,5,0/4
+power_toughness_or_loyalty,6,0/5
+power_toughness_or_loyalty,7,0/6
+power_toughness_or_loyalty,8,1/1
+power_toughness_or_loyalty,9,1/2
+power_toughness_or_loyalty,10,1/3
+power_toughness_or_loyalty,11,1/4
+power_toughness_or_loyalty,12,1/5
+power_toughness_or_loyalty,13,2/1
+power_toughness_or_loyalty,14,2/2
+power_toughness_or_loyalty,15,2/3
+power_toughness_or_loyalty,16,2/4
+power_toughness_or_loyalty,17,2/5
+power_toughness_or_loyalty,18,2/6
+power_toughness_or_loyalty,19,3/1
+power_toughness_or_loyalty,20,3/2
+power_toughness_or_loyalty,21,3/3
+power_toughness_or_loyalty,22,3/4
+power_toughness_or_loyalty,23,3/5
+power_toughness_or_loyalty,24,3/6
+power_toughness_or_loyalty,25,4/1
+power_toughness_or_loyalty,26,4/2
+power_toughness_or_loyalty,27,4/3
+power_toughness_or_loyalty,28,4/4
+power_toughness_or_loyalty,29,4/5
+power_toughness_or_loyalty,30,4/6
+power_toughness_or_loyalty,31,5/1
+power_toughness_or_loyalty,32,5/2
+power_toughness_or_loyalty,33,5/3
+power_toughness_or_loyalty,34,5/4
+power_toughness_or_loyalty,35,5/5
+power_toughness_or_loyalty,36,5/7
+power_toughness_or_loyalty,37,6/2
+power_toughness_or_loyalty,38,6/4
+power_toughness_or_loyalty,39,6/5
+power_toughness_or_loyalty,40,6/6
+power_toughness_or_loyalty,41,7/4
+power_toughness_or_loyalty,42,7/7
+power_toughness_or_loyalty,43,8/4
+power_toughness_or_loyalty,44,8/6
+power_toughness_or_loyalty,45,9/6
+artist,1,Aaron J. Riley
+artist,2,Adam Paquette
+artist,3,Adrián Rodríguez Pérez
+artist,4,Alan Pollack
+artist,5,Alejandro Mirabal
+artist,6,Alex Horley-Orlandelli
+artist,7,Alexander Mokhov
+artist,8,Alexander Skripnikov
+artist,9,Alfonso Santano
+artist,10,Allen Williams
+artist,11,Anastasia Ovchinnikova
+artist,12,Andrea Radeck
+artist,13,Andrew Mar
+artist,14,Anna Steinbauer
+artist,15,Anthony Devine
+artist,16,Anthony S. Waters
+artist,17,Antonio José Manzanedo
+artist,18,April Prime
+artist,19,Ariel Perez
+artist,20,Arnie Swekel
+artist,21,Aurore Folny
+artist,22,Austin Hsu
+artist,23,Bachzim
+artist,24,Bartek Fedyczak
+artist,25,Bastien L. Deharme
+artist,26,Billy Christian
+artist,27,Bob Petillo
+artist,28,Borja Pindado
+artist,29,Bram Sels
+artist,30,Brock Grossman
+artist,31,Bryan Sola
+artist,32,Caio Monteiro
+artist,33,Campbell White
+artist,34,Carl Critchlow
+artist,35,Chase Stone
+artist,36,Chippy
+artist,37,Chris Appelhans
+artist,38,Chris Rahn
+artist,39,Chris Rallis
+artist,40,Chris Seaman
+artist,41,Christopher Moeller
+artist,42,Cliff Childs
+artist,43,Clint Cearley
+artist,44,Craig J Spearing
+artist,45,Cristi Balanescu
+artist,46,Cynthia Sheppard
+artist,47,Cyril Van Der Haegen
+artist,48,Daarken
+artist,49,Dan Murayama Scott
+artist,50,Dany Orizio
+artist,51,Darrell Riche
+artist,52,Dave Allsop
+artist,53,Dave Dorman
+artist,54,Dave Kendall
+artist,55,David Astruga
+artist,56,David Auden Nash
+artist,57,David Martin
+artist,58,David Palumbo
+artist,59,David Rapoza
+artist,60,Denis Zhbankov
+artist,61,DiTerlizzi
+artist,62,Diana Franco
+artist,63,Dmitry Burmak
+artist,64,Domenico Cava
+artist,65,Donato Giancola
+artist,66,E. M. Gist
+artist,67,Edgar Sánchez Hidalgo
+artist,68,"Edward P. Beard, Jr."
+artist,69,Eelis Kyttanen
+artist,70,Ekaterina Burmak
+artist,71,Enora Mercier
+artist,72,Erica Gassalasca-Jape
+artist,73,Evan Shipard
+artist,74,Fesbra
+artist,75,Filip Burburan
+artist,76,Filipe Pagliuso
+artist,77,Forrest Imel
+artist,78,Francisco Miyara
+artist,79,Franz Vohwinkel
+artist,80,Gabriel Tanko
+artist,81,Glen Angus
+artist,82,Greg Opalinski
+artist,83,Greg Staples
+artist,84,Heather Hudson
+artist,85,Helge C. Balzer
+artist,86,Howard Lyon
+artist,87,Hristo D. Chukov
+artist,88,Igor Kieryluk
+artist,89,Immanuela Crovius
+artist,90,Ina Wong
+artist,91,Inkognit
+artist,92,Ioannis Fiore
+artist,93,Ionomycin
+artist,94,Irina Nordsol
+artist,95,Izzy
+artist,96,J.P. Targete
+artist,97,Jaime Jones
+artist,98,Jake Murray
+artist,99,James Paick
+artist,100,James Ryman
+artist,101,James Zapata
+artist,102,Jason A. Engle
+artist,103,Jason Chan
+artist,104,Jason Felix
+artist,105,Jason Kang
+artist,106,Jason Rainville
+artist,107,Javier Charro
+artist,108,Jeff Easley
+artist,109,Jerry Tiritilli
+artist,110,Jesper Ejsing
+artist,111,Jim Murray
+artist,112,Jinho Bae
+artist,113,Johan Grenier
+artist,114,Johann Bodin
+artist,115,John Avon
+artist,116,John Matson
+artist,117,John Tedrick
+artist,118,John Thacker
+artist,119,Jon Foster
+artist,120,Joseph Meehan
+artist,121,Josh Hass
+artist,122,Joshua Raphael
+artist,123,"Josiah ""Jo"" Cameron"
+artist,124,Josu Hernaiz
+artist,125,Julia Metzger
+artist,126,Justine Cruz
+artist,127,Justyna Dura
+artist,128,Kai Carpenter
+artist,129,Kari Christensen
+artist,130,Karl Kopinski
+artist,131,Karla Ortiz
+artist,132,Kekai Kotaki
+artist,133,Kev Walker
+artist,134,Kevin Sidharta
+artist,135,Kieran Yanner
+artist,136,Kim Sokol
+artist,137,Kimonas Theodossiou
+artist,138,Konstantin Porubov
+artist,139,Lars Grant-West
+artist,140,Leon Tukker
+artist,141,Lie Setiawan
+artist,142,Lius Lasahido
+artist,143,Livia Prima
+artist,144,Lorenzo Mastroianni
+artist,145,Loïc Canavaggia
+artist,146,Lucas Graciano
+artist,147,Lucio Parrillo
+artist,148,Mads Ahm
+artist,149,Magali Villeneuve
+artist,150,Marc Aspinall
+artist,151,Marcela Bolívar
+artist,152,Marcela Medeiros
+artist,153,Marco Nelor
+artist,154,Mark Tedin
+artist,155,Mark Winters
+artist,156,Mark Zug
+artist,157,Martin de Diego Sádaba
+artist,158,Martina Fačková
+artist,159,Martina Pilcerova
+artist,160,Masateru Ikeda
+artist,161,Mathias Kollros
+artist,162,Matt Cavotta
+artist,163,Matt Stewart
+artist,164,Matt Thompson
+artist,165,Maxime Minard
+artist,166,Michael MacRae
+artist,167,Michael Machira
+artist,168,Michael Ryan
+artist,169,Miguel Mercado
+artist,170,Mike Bierek
+artist,171,Mike Sass
+artist,172,Milivoj Ćeran
+artist,173,Monztre
+artist,174,Narendra Bintara Adi
+artist,175,Nathaniel Himawan
+artist,176,Nicholas Gregory
+artist,177,Nils Hamm
+artist,178,Nottsuo
+artist,179,Néstor Ossandón Leal
+artist,180,Olivier Bernard
+artist,181,PINDURSKI
+artist,182,Paolo Parente
+artist,183,Pauline Voss
+artist,184,Pete Venters
+artist,185,Phima
+artist,186,Piotr Dura
+artist,187,Quinton Hoover
+artist,188,Randy Gallegos
+artist,189,Randy Vargas
+artist,190,Richard Kane Ferguson
+artist,191,Ron Spears
+artist,192,Ron Spencer
+artist,193,Rudy Siswanto
+artist,194,Ryan Pancoast
+artist,195,Ryan Yee
+artist,196,Sara Winters
+artist,197,Scott M. Fischer
+artist,198,Scott Murphy
+artist,199,Seb McKinnon
+artist,200,Sidharth Chaturvedi
+artist,201,Simon Dominic
+artist,202,Slawomir Maniak
+artist,203,Stella Spente
+artist,204,Stephen Daniele
+artist,205,Steve Prescott
+artist,206,Steven Belledin
+artist,207,Svetlin Velinov
+artist,208,Terese Nielsen
+artist,209,Tetsuko
+artist,210,Thomas M. Baxa
+artist,211,Tky
+artist,212,Todd Lockwood
+artist,213,Tomasz Jedruszek
+artist,214,Tomoyo Asatani
+artist,215,Trevor Claxton
+artist,216,Tyler Walpole
+artist,217,Uriah Voth
+artist,218,Victor Adame Minguez
+artist,219,Vladimir Krisetskiy
+artist,220,Volkan Baǵa
+artist,221,Wangjie Li
+artist,222,Warren Mahy
+artist,223,Wayne England
+artist,224,Wayne Reynolds
+artist,225,Wero Gallo
+artist,226,Willian Murai
+artist,227,Winona Nelson
+artist,228,Wisnu Tan
+artist,229,Xabi Gaztelua
+artist,230,Yefim Kligerman
+artist,231,Yongjae Choi
+artist,232,Yumi Yaoshida
+artist,233,Zack Stella
+artist,234,Zezhou Chen
+artist,235,Zoltan Boros
+artist,236,rk post
+set_code,1,10E
+set_code,2,2X2
+set_code,3,2XM
+set_code,4,5DN
+set_code,5,ACR
+set_code,6,AER
+set_code,7,AFR
+set_code,8,AKH
+set_code,9,ALA
+set_code,10,APC
+set_code,11,AVR
+set_code,12,BBD
+set_code,13,BFZ
+set_code,14,BLB
+set_code,15,BNG
+set_code,16,BOK
+set_code,17,BRO
+set_code,18,C19
+set_code,19,CHK
+set_code,20,CLB
+set_code,21,CMM
+set_code,22,CMR
+set_code,23,CNS
+set_code,24,CSP
+set_code,25,DFT
+set_code,26,DKA
+set_code,27,DMR
+set_code,28,DMU
+set_code,29,DOM
+set_code,30,DSK
+set_code,31,DST
+set_code,32,DTK
+set_code,33,ECL
+set_code,34,ELD
+set_code,35,EOE
+set_code,36,EVE
+set_code,37,FDN
+set_code,38,FIN
+set_code,39,FRF
+set_code,40,GPT
+set_code,41,GTC
+set_code,42,HOU
+set_code,43,IKO
+set_code,44,IMA
+set_code,45,INR
+set_code,46,INV
+set_code,47,ISD
+set_code,48,JOU
+set_code,49,JUD
+set_code,50,KHM
+set_code,51,KLD
+set_code,52,KTK
+set_code,53,LCI
+set_code,54,LGN
+set_code,55,LTC
+set_code,56,LTR
+set_code,57,M10
+set_code,58,M11
+set_code,59,M12
+set_code,60,M13
+set_code,61,M14
+set_code,62,M15
+set_code,63,M19
+set_code,64,M20
+set_code,65,M21
+set_code,66,MBS
+set_code,67,MH2
+set_code,68,MH3
+set_code,69,MID
+set_code,70,MKM
+set_code,71,MM2
+set_code,72,MM3
+set_code,73,MMA
+set_code,74,MMQ
+set_code,75,MOM
+set_code,76,MRD
+set_code,77,MSC
+set_code,78,MSH
+set_code,79,NCC
+set_code,80,NEO
+set_code,81,ODY
+set_code,82,OGW
+set_code,83,ONE
+set_code,84,ONS
+set_code,85,ORI
+set_code,86,OTJ
+set_code,87,PCY
+set_code,88,PIP
+set_code,89,PLS
+set_code,90,RAV
+set_code,91,RNA
+set_code,92,ROE
+set_code,93,RTR
+set_code,94,RVR
+set_code,95,SCG
+set_code,96,SHM
+set_code,97,SNC
+set_code,98,SOK
+set_code,99,SOM
+set_code,100,SOS
+set_code,101,SPM
+set_code,102,STX
+set_code,103,TDM
+set_code,104,THB
+set_code,105,THS
+set_code,106,TLA
+set_code,107,TLE
+set_code,108,TMT
+set_code,109,TOR
+set_code,110,TSP
+set_code,111,TSR
+set_code,112,ULG
+set_code,113,UMA
+set_code,114,VOW
+set_code,115,WAR
+set_code,116,WOE
+set_code,117,XLN
+set_code,118,ZEN
+set_code,119,ZNR
+rarity,1,Common
+rarity,2,Mythic Rare
+rarity,3,Rare
+rarity,4,Uncommon
+language,1,English
+finishes,1,Foil
+finishes,2,Nonfoil/Foil
+legalities,1,Standard:legal; Alchemy:legal; Pioneer:legal; Historic:legal; Modern:legal; Brawl:legal; Legacy:legal; Comp. Brawl:legal; Vintage:legal; Timeless:legal; Commander:legal; Pauper:legal; Oathbreaker:legal; Penny:legal
+legalities,2,Standard:legal; Alchemy:legal; Pioneer:legal; Historic:legal; Modern:legal; Brawl:legal; Legacy:legal; Comp. Brawl:legal; Vintage:legal; Timeless:legal; Commander:legal; Pauper:legal; Oathbreaker:legal; Penny:not_legal
+legalities,3,Standard:legal; Alchemy:legal; Pioneer:legal; Historic:legal; Modern:legal; Brawl:legal; Legacy:legal; Comp. Brawl:legal; Vintage:legal; Timeless:legal; Commander:legal; Pauper:not_legal; Oathbreaker:legal; Penny:legal
+legalities,4,Standard:legal; Alchemy:legal; Pioneer:legal; Historic:legal; Modern:legal; Brawl:legal; Legacy:legal; Comp. Brawl:legal; Vintage:legal; Timeless:legal; Commander:legal; Pauper:not_legal; Oathbreaker:legal; Penny:not_legal
+legalities,5,Standard:legal; Alchemy:not_legal; Pioneer:legal; Historic:legal; Modern:legal; Brawl:legal; Legacy:legal; Comp. Brawl:legal; Vintage:legal; Timeless:legal; Commander:legal; Pauper:legal; Oathbreaker:legal; Penny:legal
+legalities,6,Standard:legal; Alchemy:not_legal; Pioneer:legal; Historic:legal; Modern:legal; Brawl:legal; Legacy:legal; Comp. Brawl:legal; Vintage:legal; Timeless:legal; Commander:legal; Pauper:legal; Oathbreaker:legal; Penny:not_legal
+legalities,7,Standard:legal; Alchemy:not_legal; Pioneer:legal; Historic:legal; Modern:legal; Brawl:legal; Legacy:legal; Comp. Brawl:legal; Vintage:legal; Timeless:legal; Commander:legal; Pauper:not_legal; Oathbreaker:legal; Penny:legal
+legalities,8,Standard:legal; Alchemy:not_legal; Pioneer:legal; Historic:legal; Modern:legal; Brawl:legal; Legacy:legal; Comp. Brawl:legal; Vintage:legal; Timeless:legal; Commander:legal; Pauper:not_legal; Oathbreaker:legal; Penny:not_legal
+legalities,9,Standard:not_legal; Alchemy:legal; Pioneer:legal; Historic:legal; Modern:legal; Brawl:legal; Legacy:legal; Comp. Brawl:legal; Vintage:legal; Timeless:legal; Commander:legal; Pauper:not_legal; Oathbreaker:legal; Penny:legal
+legalities,10,Standard:not_legal; Alchemy:not_legal; Pioneer:legal; Historic:legal; Modern:legal; Brawl:banned; Legacy:legal; Comp. Brawl:legal; Vintage:legal; Timeless:legal; Commander:legal; Pauper:not_legal; Oathbreaker:legal; Penny:legal
+legalities,11,Standard:not_legal; Alchemy:not_legal; Pioneer:legal; Historic:legal; Modern:legal; Brawl:legal; Legacy:legal; Comp. Brawl:legal; Vintage:legal; Timeless:legal; Commander:legal; Pauper:legal; Oathbreaker:legal; Penny:legal
+legalities,12,Standard:not_legal; Alchemy:not_legal; Pioneer:legal; Historic:legal; Modern:legal; Brawl:legal; Legacy:legal; Comp. Brawl:legal; Vintage:legal; Timeless:legal; Commander:legal; Pauper:legal; Oathbreaker:legal; Penny:not_legal
+legalities,13,Standard:not_legal; Alchemy:not_legal; Pioneer:legal; Historic:legal; Modern:legal; Brawl:legal; Legacy:legal; Comp. Brawl:legal; Vintage:legal; Timeless:legal; Commander:legal; Pauper:not_legal; Oathbreaker:legal; Penny:legal
+legalities,14,Standard:not_legal; Alchemy:not_legal; Pioneer:legal; Historic:legal; Modern:legal; Brawl:legal; Legacy:legal; Comp. Brawl:legal; Vintage:legal; Timeless:legal; Commander:legal; Pauper:not_legal; Oathbreaker:legal; Penny:not_legal
+legalities,15,Standard:not_legal; Alchemy:not_legal; Pioneer:legal; Historic:not_legal; Modern:legal; Brawl:not_legal; Legacy:legal; Comp. Brawl:not_legal; Vintage:legal; Timeless:legal; Commander:legal; Pauper:legal; Oathbreaker:legal; Penny:not_legal
+legalities,16,Standard:not_legal; Alchemy:not_legal; Pioneer:legal; Historic:not_legal; Modern:legal; Brawl:not_legal; Legacy:legal; Comp. Brawl:not_legal; Vintage:legal; Timeless:legal; Commander:legal; Pauper:not_legal; Oathbreaker:legal; Penny:legal
+legalities,17,Standard:not_legal; Alchemy:not_legal; Pioneer:legal; Historic:not_legal; Modern:legal; Brawl:not_legal; Legacy:legal; Comp. Brawl:not_legal; Vintage:legal; Timeless:legal; Commander:legal; Pauper:not_legal; Oathbreaker:legal; Penny:not_legal
+legalities,18,Standard:not_legal; Alchemy:not_legal; Pioneer:legal; Historic:not_legal; Modern:legal; Brawl:not_legal; Legacy:legal; Comp. Brawl:not_legal; Vintage:legal; Timeless:not_legal; Commander:legal; Pauper:legal; Oathbreaker:legal; Penny:legal
+legalities,19,Standard:not_legal; Alchemy:not_legal; Pioneer:legal; Historic:not_legal; Modern:legal; Brawl:not_legal; Legacy:legal; Comp. Brawl:not_legal; Vintage:legal; Timeless:not_legal; Commander:legal; Pauper:legal; Oathbreaker:legal; Penny:not_legal
+legalities,20,Standard:not_legal; Alchemy:not_legal; Pioneer:legal; Historic:not_legal; Modern:legal; Brawl:not_legal; Legacy:legal; Comp. Brawl:not_legal; Vintage:legal; Timeless:not_legal; Commander:legal; Pauper:not_legal; Oathbreaker:legal; Penny:legal
+legalities,21,Standard:not_legal; Alchemy:not_legal; Pioneer:legal; Historic:not_legal; Modern:legal; Brawl:not_legal; Legacy:legal; Comp. Brawl:not_legal; Vintage:legal; Timeless:not_legal; Commander:legal; Pauper:not_legal; Oathbreaker:legal; Penny:not_legal
+legalities,22,Standard:not_legal; Alchemy:not_legal; Pioneer:not_legal; Historic:banned; Modern:legal; Brawl:legal; Legacy:legal; Comp. Brawl:banned; Vintage:legal; Timeless:legal; Commander:legal; Pauper:not_legal; Oathbreaker:legal; Penny:not_legal
+legalities,23,Standard:not_legal; Alchemy:not_legal; Pioneer:not_legal; Historic:legal; Modern:legal; Brawl:legal; Legacy:legal; Comp. Brawl:legal; Vintage:legal; Timeless:legal; Commander:legal; Pauper:legal; Oathbreaker:legal; Penny:legal
+legalities,24,Standard:not_legal; Alchemy:not_legal; Pioneer:not_legal; Historic:legal; Modern:legal; Brawl:legal; Legacy:legal; Comp. Brawl:legal; Vintage:legal; Timeless:legal; Commander:legal; Pauper:legal; Oathbreaker:legal; Penny:not_legal
+legalities,25,Standard:not_legal; Alchemy:not_legal; Pioneer:not_legal; Historic:legal; Modern:legal; Brawl:legal; Legacy:legal; Comp. Brawl:legal; Vintage:legal; Timeless:legal; Commander:legal; Pauper:not_legal; Oathbreaker:legal; Penny:legal
+legalities,26,Standard:not_legal; Alchemy:not_legal; Pioneer:not_legal; Historic:legal; Modern:legal; Brawl:legal; Legacy:legal; Comp. Brawl:legal; Vintage:legal; Timeless:legal; Commander:legal; Pauper:not_legal; Oathbreaker:legal; Penny:not_legal
+legalities,27,Standard:not_legal; Alchemy:not_legal; Pioneer:not_legal; Historic:legal; Modern:not_legal; Brawl:legal; Legacy:legal; Comp. Brawl:legal; Vintage:legal; Timeless:legal; Commander:legal; Pauper:legal; Oathbreaker:legal; Penny:legal
+legalities,28,Standard:not_legal; Alchemy:not_legal; Pioneer:not_legal; Historic:legal; Modern:not_legal; Brawl:legal; Legacy:legal; Comp. Brawl:legal; Vintage:legal; Timeless:legal; Commander:legal; Pauper:legal; Oathbreaker:legal; Penny:not_legal
+legalities,29,Standard:not_legal; Alchemy:not_legal; Pioneer:not_legal; Historic:legal; Modern:not_legal; Brawl:legal; Legacy:legal; Comp. Brawl:legal; Vintage:legal; Timeless:legal; Commander:legal; Pauper:not_legal; Oathbreaker:legal; Penny:not_legal
+legalities,30,Standard:not_legal; Alchemy:not_legal; Pioneer:not_legal; Historic:not_legal; Modern:legal; Brawl:not_legal; Legacy:legal; Comp. Brawl:not_legal; Vintage:legal; Timeless:not_legal; Commander:legal; Pauper:legal; Oathbreaker:legal; Penny:legal
+legalities,31,Standard:not_legal; Alchemy:not_legal; Pioneer:not_legal; Historic:not_legal; Modern:legal; Brawl:not_legal; Legacy:legal; Comp. Brawl:not_legal; Vintage:legal; Timeless:not_legal; Commander:legal; Pauper:legal; Oathbreaker:legal; Penny:not_legal
+legalities,32,Standard:not_legal; Alchemy:not_legal; Pioneer:not_legal; Historic:not_legal; Modern:legal; Brawl:not_legal; Legacy:legal; Comp. Brawl:not_legal; Vintage:legal; Timeless:not_legal; Commander:legal; Pauper:not_legal; Oathbreaker:legal; Penny:legal
+legalities,33,Standard:not_legal; Alchemy:not_legal; Pioneer:not_legal; Historic:not_legal; Modern:legal; Brawl:not_legal; Legacy:legal; Comp. Brawl:not_legal; Vintage:legal; Timeless:not_legal; Commander:legal; Pauper:not_legal; Oathbreaker:legal; Penny:not_legal
+legalities,34,Standard:not_legal; Alchemy:not_legal; Pioneer:not_legal; Historic:not_legal; Modern:not_legal; Brawl:not_legal; Legacy:legal; Comp. Brawl:not_legal; Vintage:legal; Timeless:not_legal; Commander:legal; Pauper:banned; Oathbreaker:legal; Penny:not_legal
+legalities,35,Standard:not_legal; Alchemy:not_legal; Pioneer:not_legal; Historic:not_legal; Modern:not_legal; Brawl:not_legal; Legacy:legal; Comp. Brawl:not_legal; Vintage:legal; Timeless:not_legal; Commander:legal; Pauper:legal; Oathbreaker:legal; Penny:legal
+legalities,36,Standard:not_legal; Alchemy:not_legal; Pioneer:not_legal; Historic:not_legal; Modern:not_legal; Brawl:not_legal; Legacy:legal; Comp. Brawl:not_legal; Vintage:legal; Timeless:not_legal; Commander:legal; Pauper:legal; Oathbreaker:legal; Penny:not_legal
+legalities,37,Standard:not_legal; Alchemy:not_legal; Pioneer:not_legal; Historic:not_legal; Modern:not_legal; Brawl:not_legal; Legacy:legal; Comp. Brawl:not_legal; Vintage:legal; Timeless:not_legal; Commander:legal; Pauper:not_legal; Oathbreaker:legal; Penny:legal
+legalities,38,Standard:not_legal; Alchemy:not_legal; Pioneer:not_legal; Historic:not_legal; Modern:not_legal; Brawl:not_legal; Legacy:legal; Comp. Brawl:not_legal; Vintage:legal; Timeless:not_legal; Commander:legal; Pauper:not_legal; Oathbreaker:legal; Penny:not_legal

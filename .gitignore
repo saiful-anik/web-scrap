@@ -1,3 +1,8 @@
 __pycache__/
 *.py[cod]
-*.csv
+analysis_output/
+tmp/
+# Keep generated card datasets under version control for reproducible analysis.
+!scryfall_cards.csv
+!scryfall_cards_clean.csv
+!scryfall_category_maps.csv
