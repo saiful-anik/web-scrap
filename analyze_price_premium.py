@@ -34,20 +34,22 @@ def main() -> None:
     top_cards.to_csv(args.output_dir / "top_value_cards.csv", index=False)
 
     nonfoil = data["price_usd"].dropna()
-    premium = data["foil_premium_usd"].dropna()
-    price_cap = nonfoil.quantile(0.99)
-    premium_low, premium_high = premium.quantile([0.01, 0.99])
+    foil = data["price_usd_foil"].dropna()
+    price_cap = pd.concat([nonfoil, foil]).quantile(0.99)
 
-    figure, axes = plt.subplots(1, 2, figsize=(12, 4.8))
-    axes[0].hist(nonfoil.clip(upper=price_cap), bins=35, color="#4472C4", edgecolor="white")
-    axes[0].set_title("Nonfoil USD Price Distribution")
-    axes[0].set_xlabel("USD price (capped at 99th percentile)")
-    axes[0].set_ylabel("Number of cards")
-    axes[1].hist(premium.clip(lower=premium_low, upper=premium_high), bins=35, color="#70AD47", edgecolor="white")
-    axes[1].axvline(0, color="black", linewidth=0.8)
-    axes[1].set_title("Foil Premium Distribution")
-    axes[1].set_xlabel("Foil price minus nonfoil price (USD; capped view)")
-    axes[1].set_ylabel("Number of cards")
+    figure, axis = plt.subplots(figsize=(10, 5.5))
+    axis.hist(
+        [nonfoil.clip(upper=price_cap), foil.clip(upper=price_cap)],
+        bins=35,
+        color=["#1F4E79", "#ED7D31"],
+        alpha=0.65,
+        label=["Nonfoil USD", "Foil USD"],
+        edgecolor="white",
+    )
+    axis.set_title("USD Price Distribution: Nonfoil vs Foil")
+    axis.set_xlabel("USD price (both series capped at 99th percentile)")
+    axis.set_ylabel("Number of cards")
+    axis.legend()
     figure.tight_layout()
     figure.savefig(args.output_dir / "price_and_foil_premium_distribution.png", dpi=180)
     plt.close(figure)

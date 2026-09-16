@@ -27,6 +27,27 @@ Use a different output file if needed:
 python .\scrape_scryfall_html.py --target 2200 --output cards.csv
 ```
 
+## Generate price and foil-premium analytics
+
+The project currently includes the first proposed analysis: price and foil-premium analysis. It uses the raw scraped CSV to calculate descriptive statistics, identify the ten highest-value nonfoil cards, and create two charts.
+
+```powershell
+python .\analyze_price_premium.py
+```
+
+By default, the script reads `scryfall_cards.csv` and saves these files in `analysis_output`:
+
+- `price_premium_summary.csv` — descriptive statistics for nonfoil price, foil price, and foil premium
+- `top_value_cards.csv` — the ten highest-value cards by nonfoil USD price
+- `price_and_foil_premium_distribution.png` — overlapping nonfoil-versus-foil USD price distributions
+- `top_value_cards.png` — nonfoil and foil USD prices for the ten highest-value cards
+
+The chart views cap extreme values at percentiles only to keep the plots readable; the summary CSVs retain the original price values. To use another source CSV or output folder:
+
+```powershell
+python .\analyze_price_premium.py --input cards.csv --output-dir results
+```
+
 ## Clean the data
 
 The cleanup script preserves the original scraped CSV and writes a separate, analysis-ready file. It collapses irregular whitespace, standardizes price fields as plain decimal values, normalizes set codes and legality values, removes duplicate Scryfall print IDs, and drops every row that has a missing value in any source column.
