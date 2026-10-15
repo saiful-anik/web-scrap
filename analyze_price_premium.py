@@ -13,7 +13,8 @@ PRICE_COLUMNS = ["price_usd", "price_usd_foil"]
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Create price and foil-premium summaries and charts.")
-    parser.add_argument("--input", type=Path, default=Path("scryfall_cards.csv"))
+    parser.add_argument("--input", type=Path, default=Path("scryfall_cards_clean.csv"))
+    parser.add_argument("--raw-input", type=Path, default=Path("scryfall_cards.csv"))
     parser.add_argument("--output-dir", type=Path, default=Path("analysis_output"))
     args = parser.parse_args()
     if not args.input.is_file():
@@ -28,6 +29,36 @@ def main() -> None:
 
     summary = data[["price_usd", "price_usd_foil", "foil_premium_usd", "foil_premium_percent"]].describe().T
     summary.to_csv(args.output_dir / "price_premium_summary.csv")
+
+    if args.raw_input.is_file():
+        raw = pd.read_csv(args.raw_input, dtype=str, keep_default_na=False)
+        missing_counts = raw.apply(lambda column: column.str.strip().eq("").sum())
+        missing_counts = missing_counts[missing_counts > 0].sort_values()
+        if not missing_counts.empty:
+            missing_percent = missing_counts / len(raw) * 100
+            colors = [
+                "#D88B1D" if field in PRICE_COLUMNS else "#6C8EBF"
+                for field in missing_counts.index
+            ]
+            figure, axis = plt.subplots(figsize=(10, 6))
+            bars = axis.barh(missing_counts.index, missing_percent, color=colors)
+            for bar, count, percent in zip(bars, missing_counts, missing_percent):
+                axis.text(
+                    bar.get_width() + 0.5,
+                    bar.get_y() + bar.get_height() / 2,
+                    f"{count:,} ({percent:.2f}%)",
+                    va="center",
+                    fontsize=9,
+                )
+            axis.set_title(f"Missing Values in Raw Dataset (n={len(raw):,})")
+            axis.set_xlabel("Rows missing field (%)")
+            axis.set_ylabel("Source field")
+            axis.set_xlim(0, max(missing_percent) * 1.32)
+            axis.grid(axis="x", color="#D9DEE7", linewidth=0.7, alpha=0.8)
+            axis.set_axisbelow(True)
+            figure.tight_layout()
+            figure.savefig(args.output_dir / "missingness_by_field.png", dpi=180)
+            plt.close(figure)
 
     top_cards = data[["name", "set_code", "rarity", "price_usd", "price_usd_foil", "foil_premium_usd"]]
     top_cards = top_cards.sort_values("price_usd", ascending=False).head(10)
@@ -46,8 +77,8 @@ def main() -> None:
         label=["Nonfoil USD", "Foil USD"],
         edgecolor="white",
     )
-    axis.set_title("USD Price Distribution: Nonfoil vs Foil")
-    axis.set_xlabel("USD price (both series capped at 99th percentile)")
+    axis.set_title(f"USD Price Distribution: Matched Cards (n={len(data):,})")
+    axis.set_xlabel("USD price (both series capped at the combined 99th percentile)")
     axis.set_ylabel("Number of cards")
     axis.legend()
     figure.tight_layout()
@@ -69,7 +100,7 @@ def main() -> None:
     figure.savefig(args.output_dir / "top_value_cards.png", dpi=180)
     plt.close(figure)
 
-    print(f"Analyzed {len(data):,} records. Saved price summaries and charts to {args.output_dir}.")
+    print(f"Analyzed {len(data):,} matched-price records. Saved summaries and charts to {args.output_dir}.")
 
 
 if __name__ == "__main__":

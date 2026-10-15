@@ -1,4 +1,4 @@
-"""Create a complete-case, category-encoded dataset from Scryfall scraper output."""
+"""Create a price-analysis dataset from Scryfall scraper output."""
 
 import argparse
 import csv
@@ -14,7 +14,7 @@ PRICE_FIELDS = {
     "price_usd_foil",
     "price_eur_foil",
 }
-REQUIRED_FIELDS = {"name", "scryfall_id", "card_url"}
+ANALYSIS_REQUIRED_FIELDS = {"price_usd", "price_usd_foil"}
 CATEGORY_FIELDS = [
     "mana_cost",
     "type_line",
@@ -70,25 +70,19 @@ def clean_row(row):
 
 
 def category_mappings(rows):
-    """Assign repeatable one-based integer codes to every categorical value."""
+    """Create optional lookup codes without treating blank categories as a value."""
     return {
-        field: {value: index for index, value in enumerate(sorted({row[field] for row in rows}), start=1)}
+        field: {value: index for index, value in enumerate(
+            sorted({row[field] for row in rows if row.get(field, "")}), start=1
+        )}
         for field in CATEGORY_FIELDS
     }
 
 
-def encoded_row(row, mappings, row_id):
-    """Return the numeric analysis record; raw categorical text stays in the lookup file."""
-    record = {"id": row_id}
-    for field in PRICE_FIELDS:
-        record[field] = row[field]
-    for field in CATEGORY_FIELDS:
-        record[f"{field}_id"] = mappings[field][row[field]]
-    return record
-
-
 def main():
-    parser = argparse.ArgumentParser(description="Create a complete-case, encoded Scryfall analysis CSV.")
+    parser = argparse.ArgumentParser(
+        description="Create a Scryfall price-analysis CSV, requiring only the two USD price fields."
+    )
     parser.add_argument("--input", type=Path, default=Path("scryfall_cards.csv"))
     parser.add_argument("--output", type=Path, default=Path("scryfall_cards_clean.csv"))
     parser.add_argument("--mapping-output", type=Path, default=Path("scryfall_category_maps.csv"))
@@ -103,28 +97,32 @@ def main():
         reader = csv.DictReader(source)
         if not reader.fieldnames:
             parser.error("input file must contain a header row")
-        missing = REQUIRED_FIELDS - set(reader.fieldnames)
+        missing = ANALYSIS_REQUIRED_FIELDS - set(reader.fieldnames)
         if missing:
             parser.error(f"input is missing required columns: {', '.join(sorted(missing))}")
 
-        complete_rows, skipped, seen = [], 0, set()
+        analysis_rows, skipped_missing_price, skipped_duplicate = [], 0, 0
+        seen = set()
         for row in reader:
             cleaned = clean_row(row)
             card_id = cleaned["scryfall_id"]
-            # Data-science output uses complete cases only: any blank input field removes the row.
-            if any(not cleaned.get(field, "") for field in reader.fieldnames) or card_id in seen:
-                skipped += 1
+            # Price analysis needs both USD prices for a valid pairwise comparison.
+            if any(not cleaned.get(field, "") for field in ANALYSIS_REQUIRED_FIELDS):
+                skipped_missing_price += 1
                 continue
-            seen.add(card_id)
-            complete_rows.append(cleaned)
+            if card_id and card_id in seen:
+                skipped_duplicate += 1
+                continue
+            if card_id:
+                seen.add(card_id)
+            analysis_rows.append(cleaned)
 
-    mappings = category_mappings(complete_rows)
-    encoded_fields = ["id", *sorted(PRICE_FIELDS), *(f"{field}_id" for field in CATEGORY_FIELDS)]
+    mappings = category_mappings(analysis_rows)
     with args.output.open("w", encoding="utf-8-sig", newline="") as destination:
-        writer = csv.DictWriter(destination, fieldnames=encoded_fields)
+        # Keep every source column so analysis results can be traced back to cards.
+        writer = csv.DictWriter(destination, fieldnames=reader.fieldnames)
         writer.writeheader()
-        for row_id, row in enumerate(complete_rows, start=1):
-            writer.writerow(encoded_row(row, mappings, row_id))
+        writer.writerows(analysis_rows)
 
     with args.mapping_output.open("w", encoding="utf-8-sig", newline="") as destination:
         writer = csv.DictWriter(destination, fieldnames=["column", "code", "value"])
@@ -134,8 +132,10 @@ def main():
                 writer.writerow({"column": field, "code": code, "value": value})
 
     print(
-        f"Saved {len(complete_rows):,} complete, encoded rows to {args.output}; "
-        f"saved category mappings to {args.mapping_output}; skipped {skipped:,} incomplete or duplicate rows"
+        f"Saved {len(analysis_rows):,} rows with both USD prices to {args.output}; "
+        f"saved optional category mappings to {args.mapping_output}; "
+        f"skipped {skipped_missing_price:,} rows missing either USD price and "
+        f"{skipped_duplicate:,} duplicate Scryfall IDs"
     )
 
 

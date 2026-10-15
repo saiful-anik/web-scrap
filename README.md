@@ -29,20 +29,22 @@ python .\scrape_scryfall_html.py --target 2200 --output cards.csv
 
 ## Generate price and foil-premium analytics
 
-The project currently includes the first proposed analysis: price and foil-premium analysis. It uses the raw scraped CSV to calculate descriptive statistics, identify the ten highest-value nonfoil cards, and create two charts.
+The price analysis uses `scryfall_cards_clean.csv`. The cleaner keeps a row when both `price_usd` and `price_usd_foil` are present, because those are the fields required for a paired comparison. Missing values in other fields do not remove a row. The analysis calculates descriptive statistics, identifies the ten highest-value nonfoil cards within the matched-price dataset, and creates two charts.
 
 ```powershell
+python .\clean_scryfall_data.py
 python .\analyze_price_premium.py
 ```
 
-By default, the script reads `scryfall_cards.csv` and saves these files in `analysis_output`:
+By default, the script reads `scryfall_cards_clean.csv` and saves these files in `analysis_output`:
 
 - `price_premium_summary.csv` — descriptive statistics for nonfoil price, foil price, and foil premium
 - `top_value_cards.csv` — the ten highest-value cards by nonfoil USD price
+- `missingness_by_field.png` — missing-value counts and percentages in the raw source file
 - `price_and_foil_premium_distribution.png` — overlapping nonfoil-versus-foil USD price distributions
 - `top_value_cards.png` — nonfoil and foil USD prices for the ten highest-value cards
 
-The chart views cap extreme values at percentiles only to keep the plots readable; the summary CSVs retain the original price values. To use another source CSV or output folder:
+The chart views cap extreme values at the combined 99th percentile only to keep the plots readable; the summary CSVs retain the original price values. To use another source CSV or output folder:
 
 ```powershell
 python .\analyze_price_premium.py --input cards.csv --output-dir results
@@ -50,9 +52,9 @@ python .\analyze_price_premium.py --input cards.csv --output-dir results
 
 ## Clean the data
 
-The cleanup script preserves the original scraped CSV and writes a separate, analysis-ready file. It collapses irregular whitespace, standardizes price fields as plain decimal values, normalizes set codes and legality values, removes duplicate Scryfall print IDs, and drops every row that has a missing value in any source column.
+The cleanup script preserves the original scraped CSV and writes a separate analysis file. It collapses irregular whitespace, standardizes price fields as plain decimal values, normalizes set codes and legality values, and removes duplicate Scryfall print IDs. A row is removed only when `price_usd` or `price_usd_foil` is missing, since both prices are required by the paired price analysis. Missing values in other fields remain blank.
 
-The cleaned dataset does not repeat categorical text. It replaces each repeated category with a numeric ID, so every `Common` rarity has the same `rarity_id`, every set has the same `set_code_id`, and so on. Collector numbers are excluded because they identify individual printings rather than reusable categories. The code-to-value lookup is saved separately in `scryfall_category_maps.csv`.
+The cleaned dataset keeps all original source columns so card names and set information remain available alongside the prices. An optional category lookup for nonblank values is saved separately in `scryfall_category_maps.csv`.
 
 ```powershell
 python .\clean_scryfall_data.py
