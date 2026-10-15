@@ -72,7 +72,7 @@ def main() -> None:
     axis.hist(
         [nonfoil.clip(upper=price_cap), foil.clip(upper=price_cap)],
         bins=35,
-        color=["#1F4E79", "#ED7D31"],
+        color=["#174A7E", "#5B9BD5"],
         alpha=0.65,
         label=["Nonfoil USD", "Foil USD"],
         edgecolor="white",
@@ -89,7 +89,7 @@ def main() -> None:
     labels = top_for_chart["name"] + " (" + top_for_chart["set_code"].fillna("?") + ")"
     figure, axis = plt.subplots(figsize=(9, 6))
     positions = np.arange(len(top_for_chart))
-    axis.barh(positions - 0.2, top_for_chart["price_usd"], height=0.38, color="#ED7D31", label="Nonfoil USD")
+    axis.barh(positions - 0.2, top_for_chart["price_usd"], height=0.38, color="#174A7E", label="Nonfoil USD")
     axis.barh(positions + 0.2, top_for_chart["price_usd_foil"], height=0.38, color="#5B9BD5", label="Foil USD")
     axis.set_yticks(positions, labels)
     axis.set_title("Top 10 Cards by Nonfoil USD Price")
